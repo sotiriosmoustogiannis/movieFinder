@@ -2,7 +2,7 @@
   <h2 class="mb-4">{{ collection.title }}</h2>
   <p class="mb-4">{{ collection.description }}</p>
 
-  <div *ngIf="!collection.movies.length" class="alert alert-info">No movies in this collection.</div>
+  <div *ngIf="!collection.movies" class="alert alert-info">No movies in this collection.</div>
 
   <div *ngFor="let movie of collection.movies; index as i" class="card mb-3">
     <div class="row g-0">
