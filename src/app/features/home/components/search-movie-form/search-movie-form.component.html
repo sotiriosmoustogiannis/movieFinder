@@ -1,0 +1,14 @@
+<form [formGroup]="searchMovieForm" (ngSubmit)="searchMovies()" class="row mt-3 gx-3 gy-2 align-items-center justify-content-center">
+  <div class="col-sm-6">
+    <label class="visually-hidden" for="specificSizeInputName">Movie</label>
+    <input type="text" formControlName="movieText" name="movie-text" class="form-control">
+    <div *ngIf="searchMovieForm.get('movieText')?.invalid && (searchMovieForm.get('movieText')?.dirty || searchMovieForm.get('movieText')?.touched)">
+      <small *ngIf="searchMovieForm.get('movieText')?.errors?.['required']" class="text-danger">Movie name is required.</small>
+      <small *ngIf="searchMovieForm.get('movieText')?.errors?.['minThreeChars']" class="text-danger">Minimum three characters required.</small>
+      <small *ngIf="searchMovieForm.get('movieText')?.errors?.['alphanumeric']" class="text-danger">Only alphanumeric characters are allowed.</small>
+    </div>
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary" [disabled]="searchMovieForm.invalid">Search for Movies</button>
+  </div>
+</form>

@@ -1,0 +1,15 @@
+.container {
+    padding: 20px;
+  }
+  
+  .collection-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .collection-card h3 {
+    margin-top: 0;
+  }
+  

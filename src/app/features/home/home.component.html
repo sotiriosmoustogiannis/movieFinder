@@ -1,0 +1,21 @@
+<div class="home-container">
+  <div class="row mt-4">
+    <div class="col d-flex justify-content-around align-items-end">
+      <search-movie-form (searchQuery)="onSearch($event)"></search-movie-form>
+      <button class="btn btn-primary ml-2" (click)="navigateToCollections()">Go to Collections</button>
+    </div>
+  </div>
+
+  <div class="row mt-4">
+    <movie-list
+      [movies]="searchedMovies"
+      [totalPages]="totalPages"
+      [currentPage]="currentPage"
+      (pageChange)="handlePageChange($event)"
+    ></movie-list>
+  </div>
+
+  <movie-details-modal
+    [movie]="selectedMovie"
+  ></movie-details-modal>
+</div>

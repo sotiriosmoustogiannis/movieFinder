@@ -1,0 +1,12 @@
+<div class="container mt-4">
+  <h2 class="mb-3">My Movie Collections</h2>
+  <button class="btn btn-primary mb-4" (click)="navigateToCreate()">Create New Collection</button>
+  <div *ngIf="collections.length === 0" class="alert alert-warning">No collections available.</div>
+  <div *ngFor="let collection of collections; index as i" class="card mb-3 shadow-sm">
+    <div class="card-body">
+      <h3 class="card-title">{{ collection.title }}</h3>
+      <p class="card-text">{{ collection.description }}</p>
+      <button class="btn btn-secondary" (click)="viewCollection(i)">View Collection</button>
+    </div>
+  </div>
+</div>

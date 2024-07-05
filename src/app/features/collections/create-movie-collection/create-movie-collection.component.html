@@ -1,0 +1,21 @@
+<div class="container mt-4">
+    <h2>Create New Collection</h2>
+    <form [formGroup]="collectionForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="title" class="form-label">Title</label>
+        <input type="text" id="title" formControlName="title" class="form-control" />
+        <div *ngIf="collectionForm.get('title')?.invalid && (collectionForm.get('title')?.dirty || collectionForm.get('title')?.touched)" class="text-danger">
+          Title is required.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea id="description" formControlName="description" class="form-control"></textarea>
+        <div *ngIf="collectionForm.get('description')?.invalid && (collectionForm.get('description')?.dirty || collectionForm.get('description')?.touched)" class="text-danger">
+          Description is required.
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary" [disabled]="collectionForm.invalid">Create Collection</button>
+    </form>
+  </div>
+  

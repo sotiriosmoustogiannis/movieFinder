@@ -1,0 +1,22 @@
+<div class="container mt-4" *ngIf="collection">
+  <h2 class="mb-4">{{ collection.title }}</h2>
+  <p class="mb-4">{{ collection.description }}</p>
+
+  <div *ngIf="!collection.movies.length" class="alert alert-info">No movies in this collection.</div>
+
+  <div *ngFor="let movie of collection.movies; index as i" class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-2">
+        <img src="https://image.tmdb.org/t/p/original/{{ movie.poster_path }}" class="img-fluid" alt="{{ movie.title }}">
+      </div>
+      <div class="col-md-10">
+        <div class="card-body">
+          <h5 class="card-title">
+            <a [routerLink]="['/collection', collectionIndex, 'movie', movie.id]" [state]="{ movie: movie }">{{ movie.title }}</a>
+          </h5>
+          <button class="btn btn-danger btn-sm" (click)="removeMovie(i)">Remove</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

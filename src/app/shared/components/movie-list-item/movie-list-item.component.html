@@ -1,0 +1,9 @@
+<div class="card h-100">
+  <img class="card-img-top" [src]="'https://image.tmdb.org/t/p/original/' + movie.poster_path" [alt]="movie.title">
+  <div class="card-body">
+    <h5 class="card-title">
+      <a [routerLink]="['/movie', movie.id]">{{ movie.title }}</a>
+    </h5>
+    <p class="card-text">Rating: {{ movie.vote_average }}</p>
+  </div>
+</div>
