@@ -83,7 +83,8 @@ This online application allows users to search for movies, read detailed informa
 
 ## Data
 
-- Optional data to set key "collections" on LocalStorage
+- Optional data, set the below Json on key "collections" on LocalStorage. As for the time, it has not been implemented to add movies to a collection.
+- If you want to check other functionalities such as removing a movie from a collection, or to watch movie details, and more.
 ```json
 [
    {
