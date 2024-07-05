@@ -18,6 +18,7 @@ This online application allows users to search for movies, read detailed informa
 
 - [Node.js](https://nodejs.org/) 
 - [npm](https://www.npmjs.com/)
+- [Angular CLI](https://angular.dev/cli/)
 
 ### Getting Started
 
