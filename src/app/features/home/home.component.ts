@@ -82,10 +82,6 @@ export class HomeComponent implements OnInit {
     );
   }
 
-  // openMovieDetails(movieId: number) {
-  //   this.router.navigate(['/movie', movieId]);
-  // }
-
   loadMovieDetails(movieId: string | null) {
     this.movieService.getMovieDetails(movieId).subscribe((data: any) => {
       this.selectedMovie = data;
