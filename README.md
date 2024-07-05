@@ -80,6 +80,55 @@ This online application allows users to search for movies, read detailed informa
 - Users can open his collection and check the movies they have added.
 - Users can delete a movie from a collection.
 
+## Data
+
+- Optional data to set key "collections" on LocalStorage
+```json
+[
+   {
+      "title":"Favorite Collection",
+      "description":"My favorite movies",
+      "movies":[
+         {
+            "id":"755450",
+            "title":"Godfather",
+            "poster_path":"/ipV6QtfFnrj80Ar2eH24gjSZHir.jpg"
+         },
+         {
+            "id":"238",
+            "title":"The Godfather",
+            "poster_path":"/tmU7GeKVybMWFButWEGl2M4GeiP.jpg"
+         },
+         {
+            "id":"242",
+            "title":"The Godfather Part III",
+            "poster_path":"/zNnjHLDtV8Ti3aworltaeaLMov4.jpg"
+         }
+      ]
+   },
+   {
+      "title":"Comedy Collection",
+      "description":"My comedy collections",
+      "movies":[
+         {
+            "id":"1053592",
+            "title":"Todos los nombres de Dios",
+            "poster_path":"/n15gfcgwV0LVPSobrayZcFHcwN6.jpg"
+         },
+         {
+            "id":"494892",
+            "title":"God",
+            "poster_path":"/4np8KzfT7XHgwQT5sJTRogqIn0s.jpg"
+         },
+         {
+            "id":"536115",
+            "title":"Godzilla: The Planet Eater",
+            "poster_path":"/q3j4OQFFDKM6fdQt9gE56kfDBNG.jpg"
+         }
+      ]
+   }
+]```
+
 ## Contributing
 
 Contributions to this project are welcome!
