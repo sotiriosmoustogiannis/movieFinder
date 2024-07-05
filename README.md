@@ -10,6 +10,7 @@ This online application allows users to search for movies, read detailed informa
 - [Technologies](#technologies)
 - [Usage](#usage)
 - [Features](#features)
+- [Data](#data)
 - [Contributing](#contributing)
 
 ## Installation
