@@ -24,7 +24,7 @@ export class MovieCollectionDetailsComponent implements OnInit{
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
-      this.collectionIndex = Number(params.get('id'));
+      this.collectionIndex = Number(params.get('collectionId'));
       this.loadCollection();
     });
   }
